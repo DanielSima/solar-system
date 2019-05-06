@@ -1,0 +1,182 @@
+body {
+  background: #020202;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.topnav {
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.topnav a {
+  color: #FCEBE8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: inline-block;
+  max-width: 300px;
+  vertical-align: top;
+}
+
+.topnav a:hover {
+  padding-bottom: 11px;
+  border-bottom: 3px solid #E32704;
+}
+
+.arrowbox, .arrowboxEnd {
+  height: 20vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #020202);
+  top: 80.1vh;
+  position: absolute;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  padding-left: calc((100vw - 50px)/2);
+  padding-right: calc((100vw - 50px)/2);
+  background-image: url(../img/arrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  bottom: 30px;
+  position: absolute;
+}
+
+.titletext, .titleTextEnd, .titleBox, .end, .title {
+  color: #E32704;
+  font-family: "Righteous", cursive;
+  font-size: 5em;
+}
+
+.title, .end {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-image: url("../img/sun.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titleBox, .end {
+  text-align: center;
+  width: 100vw;
+  color: #FCEBE8;
+  padding: 80px 0px;
+}
+
+.innerBox {
+  width: 70vw;
+  padding: 0px 15vw;
+}
+
+.outterBox, .planetBox, .planetBoxLast {
+  background-color: #020202;
+  height: 65vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planetBox, .planetBoxLast {
+  background-color: #020202;
+  border-bottom: 3px solid #E32704;
+}
+
+.planetBoxLast {
+  border-bottom: none;
+}
+
+.text, .titleTextEnd, .planetTextRight, .planetTextLeft {
+  color: #FCEBE8;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  padding: 40px 0px;
+}
+
+.planetTextLeft {
+  text-align: left;
+  width: calc(50vw - 100px);
+  padding: 100px;
+  padding-right: 0;
+  margin: 0;
+  float: left;
+  line-height: 1.4em;
+}
+
+.planetTextRight {
+  text-align: right;
+  width: calc(50vw - 100px);
+  padding: 100px;
+  padding-left: 0;
+  margin: 0;
+  float: right;
+  line-height: 1.4em;
+}
+
+.planetImageLeft {
+  max-height: 65vh;
+  width: auto;
+  padding-left: calc((50vw - 65vh)/2);
+  padding-right: calc((50vw - 65vh)/2);
+  float: left;
+}
+
+.planetImageRight {
+  max-height: 65vh;
+  width: auto;
+  padding-left: calc((50vw - 65vh)/2);
+  padding-right: calc((50vw - 65vh)/2);
+  float: right;
+}
+
+.boxVideo, .boxVideoSide {
+  width: 70vw;
+  height: calc(70vw*9/16);
+}
+
+.boxVideoSide {
+  max-width: 50vw;
+  width: calc(50vw - 200px);
+  height: calc((50vw - 100px)*9/16);
+  padding: calc((65vh - (50vw - 100px)*9/16)/2) 100px;
+  float: right;
+}
+
+iframe {
+  box-shadow: 0px 0px 40px #E32704;
+}
+
+.end {
+  background-image: url("../img/earth.jpg");
+}
+
+.titleTextEnd {
+  margin-top: 10vh;
+  margin-bottom: 0;
+  font-size: 2rem;
+  color: #FCEBE8;
+}
+
+.arrowboxEnd {
+  background-image: linear-gradient(#020202, rgba(0, 0, 0, 0));
+  top: initial;
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,208 @@
+//sass --watch scss/style.scss:css/style.css
+$primaryColor: #020202;
+$accentColor: #E32704;
+$whiteColor: #FCEBE8;
+
+$titleFont: 'Righteous',
+cursive;
+$primaryFont: 'Quicksand',
+sans-serif;
+
+body {
+	background: $primaryColor;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.topnav {
+	background-color: rgba(0, 0, 0, 0.7);
+	overflow: hidden;
+	font-family: $primaryFont;
+	font-size: 1em;
+	align-content: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+}
+
+.topnav a {
+	color: $whiteColor;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	display: inline-block;
+	max-width: 300px;
+	vertical-align: top;
+}
+
+.topnav a:hover {
+	padding-bottom: 11px;
+	border-bottom: 3px solid $accentColor;
+}
+
+.arrowbox {
+	height: 20vh;
+	width: 100vw;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), $primaryColor);
+	top: 80.1vh;
+	position: absolute;
+}
+
+.arrow {
+	width: 50px;
+	height: 50px;
+	padding-left: calc((100vw - 50px)/2);
+	padding-right: calc((100vw - 50px)/2);
+	background-image: url(../img/arrow.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50px;
+	bottom: 30px;
+	position: absolute;
+}
+
+.titletext {
+	color: $accentColor;
+	font-family: $titleFont;
+	font-size: 5em;
+}
+
+.title {
+	text-align: center;
+	@extend .titletext;
+	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+	background-image: url("../img/sun.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.titleBox {
+	@extend .titletext;
+	text-align: center;
+	width: 100vw;
+	color: $whiteColor;
+	padding: 80px 0px;
+}
+
+.innerBox {
+	width: 70vw;
+	padding: 0px 15vw;
+}
+
+.outterBox {
+	background-color: $primaryColor;
+	height: 65vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.planetBox {
+	@extend .outterBox;
+	background-color: $primaryColor;
+	border-bottom: 3px solid $accentColor;
+}
+
+.planetBoxLast {
+	@extend .planetBox;
+	border-bottom: none;
+}
+
+.text {
+	color: $whiteColor;
+	font-family: $primaryFont;
+	font-size: 1rem;
+	padding: 40px 0px;
+}
+
+@mixin planetText($where) {
+	@extend .text;
+	text-align: $where;
+	//height: calc(65vh - 200px);
+	width: calc(50vw - 100px);
+	padding: 100px;
+
+	@if $where==left {
+		padding-right: 0;
+	}
+
+	@else {
+		padding-left: 0;
+	}
+
+	margin: 0;
+	float: $where;
+	line-height: 1.4em;
+}
+
+.planetTextLeft {
+	@include planetText(left)
+}
+
+.planetTextRight {
+	@include planetText(right)
+}
+
+@mixin planetImage($where) {
+	max-height: 65vh;
+	width: auto;
+	padding-left: calc((50vw - 65vh)/2);
+	padding-right: calc((50vw - 65vh)/2);
+	float: $where;
+}
+
+.planetImageLeft {
+	@include planetImage(left)
+}
+
+.planetImageRight {
+	@include planetImage(right)
+}
+
+.boxVideo {
+	width: 70vw;
+	height: calc(70vw*9/16);
+}
+
+.boxVideoSide {
+	@extend .boxVideo;
+	max-width: 50vw;
+	width: calc(50vw - 200px);
+	height: calc((50vw - 100px)*9/16);
+	padding: calc((65vh - (50vw - 100px)*9/16)/2) 100px;
+	float: right;
+}
+
+iframe {
+	box-shadow: 0px 0px 40px $accentColor;
+}
+
+.end {
+	@extend .titleBox;
+	@extend .title;
+	background-image: url("../img/earth.jpg");
+}
+
+.titleTextEnd {
+	@extend .text;
+	@extend .titletext;
+	margin-top: 10vh;
+	margin-bottom: 0;
+	font-size: 2rem;
+	color: $whiteColor;
+}
+
+.arrowboxEnd {
+	@extend .arrowbox;
+	background-image: linear-gradient($primaryColor, rgba(0, 0, 0, 0));
+	top: initial;
+	margin-bottom: 10px;
+}
